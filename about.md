@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: about
 title: About
-permalink: /about/
+permalink: /perma/
 ---
 
 Some information about you!

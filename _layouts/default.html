@@ -1,63 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    <meta name="author" content="{{ site.name }}" />
-    <meta name="description" content="{{ site.description }}">
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
-
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-          
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-          
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">Aboot</a>
-          </nav>
-        </header>
-      </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-	<div class="wrapper-footer footer footer-home">
-		<h5>Find me on
-			<a href="https://github.com/cheehieu"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></a>
-			and
-			<a href="http://www.linkedin.com/in/hieuminh"><svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a>
-		</h5>
-		<!--div id="changetip_tipme_button" data-bid="PV5ADgwH5YWX5opUxrWcLQ" data-uid="mDtb3nGBZud7dRfdt4xG77"></div><script>(function(document,script,id){var js,r=document.getElementsByTagName(script)[0],protocol=/^http:/.test(document.location)?'http':'https';if(!document.getElementById(id)){js=document.createElement(script);js.id=id;js.src=protocol+'://widgets.changetip.com/public/js/widgets.js';r.parentNode.insertBefore(js,r)}}(document,'script','changetip_w_0'));</script-->
-		<p>&copy; <?php echo date("Y"); ?> Crafted by HMN. All rights reserved.</p>
-	</div>
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="javascripts/app.js"></script>
-	<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
-	<script src="javascripts/ie10-viewport-bug-workaround.js"></script>	
-
-    {% include analytics.html %}
-  </body>
+{% include head.html %}
+<body>
+	{% include nav.html %}
+	{{ content }}
+	{% include footer.html %}
+</body>
 </html>
